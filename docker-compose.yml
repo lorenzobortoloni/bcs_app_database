@@ -1,0 +1,26 @@
+version: '3'
+
+networks:
+  link2:
+    driver: bridge
+
+services:
+  db:
+#    build:
+#      context: .
+#      dockerfile: ./Dockerfile
+    image: gtrgtr/bcs_app_database
+#    image: basic
+    restart: always
+    user: root
+    environment:
+      - POSTGRESQL_USERNAME=rotechnology
+      - POSTGRESQL_PASSWORD=rotech123
+      - POSTGRESQL_DATABASE=bcs
+#    volumes:
+#      - ./opt/bitnami/:/opt/bitnami/
+#      - ./rootfs:/
+    ports:
+      - '8083:5432'
+    networks:
+      - link2
