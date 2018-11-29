@@ -6,11 +6,11 @@ networks:
 
 services:
   db:
-#    build:
-#      context: .
-#      dockerfile: ./Dockerfile
-    image: gtrgtr/bcs_app_database
-#    image: basic
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+#    image: gtrgtr/bcs_app_database
+    image: bcs_app_database
     restart: always
     user: root
     environment:

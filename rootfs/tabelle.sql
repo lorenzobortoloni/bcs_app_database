@@ -10,7 +10,8 @@ CREATE TABLE IF NOT EXISTS dati_connessione (
     anvizDeviceCode   int
 );
 
-INSERT INTO dati_connessione
-    ('192.168.16.3', 5010, 0);
+--INSERT INTO dati_connessione
+--    (192.168.16.3, 5010, 0);
 
 COPY tabella_utenti FROM '/tabella_utenti.txt' (DELIMITER '=');
+COPY dati_connessione FROM '/dati_connessione.txt' (DELIMITER '=');
