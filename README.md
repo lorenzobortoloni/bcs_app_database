@@ -2,5 +2,5 @@
 
 Add tabella_utenti.txt file in rootfs/ and start the container with "docker-compose up -d" (background mode)
 
-Syntax:
+Syntax of tabella_utenti.txt:
 username=password=userid
